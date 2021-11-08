@@ -1,6 +1,7 @@
 import "./App.css";
 import Complex from "./complex-props";
 import Props from "./props";
+import Search from "./search";
 
 const comment = {
   date: new Date(),
@@ -20,6 +21,7 @@ function App() {
         text={comment.text}
         author={comment.author}
       />
+      <Search />
     </div>
   );
 }
