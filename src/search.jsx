@@ -1,10 +1,13 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 const animals = ['bird', 'cat', 'rat', 'dog']
 
 function Search(){
     const [location, setLocation] = useState("Seattle")
     const[animal, setAnimal] = useState("")
+    useEffect(() => {
+        document.title = `This is a ${animal}`
+    })
     function updateLocation(e) {
         setLocation(e.target.value) 
     }
